@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav1.css">
+    <link rel="stylesheet" href="uodat.css">
+    <title>Update</title>
+</head>
+<body>
+    <div class="home_container">
+        <div class="nav">
+            <span class="logo"><a href="index.html" ><img src="JSW_Group_logo.svg.png" width="100%" height="20px" class="log"></a></span>
+            <span class="links">
+                <a href="index.html" class="link">HOME</a>
+                <a href="index.html">UPLOAD</a>
+                <a href="updat.html">UPDATE</a>
+                <a href="contact-us.html" class="link">CONTACT US</a>
+                <a href="about-us.html" class="link">ABOUT US</a>
+            </span>
+        </div>
+        <section class="sec_update">
+            <img src="rocket.png" onclick="fly()" alt="rocket" class="rocket">
+            <h1 class="head_update">Update your old file<br> here</h1>
+            <p class="head_para">Update your old file to help our tool to produce the correct output</p>
+            <button class="btn_update">Click here!</button>
+        </section>
+        <div class="next">
+            <span onclick="window.location.href='index.html'" class="left">←</span>
+            <span onclick="window.location.href='index.html'" class="right">→</span>
+        </div>
+
+        <script>
+            const rocket = document.querySelector('.rocket');
+            const button = document.querySelector('.btn_update');
+
+            button.addEventListener("click", fly);
+
+            function fly(){
+                rocket.style.animation = "flyAbove2 2s ease-in";
+                setTimeout(goto, 1500);
+            }
+            function goto(){
+                window.location.href='update.html';
+            }
+        </script>
+</body>
+</html>

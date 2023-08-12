@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(242, 241, 239);
+}
+.box1{
+    height: 500px;
+    width: 400px;
+    background-color: #fff6f6;
+    border-radius: 6px 0px 0px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 4px 4px rgb(179, 179, 179);
+}
+.bo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    height: 320px;
+    border-radius: 4px;
+    border: 1px solid none ;
+    box-shadow: 4px 4px 4px 4px rgb(179, 179, 179);
+}
+.contact_btn{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(2, 79, 2);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+.contact_btn:hover{
+    cursor: pointer;
+    background-color: green;
+}
+.contact_p1{
+    margin-top: 5px;
+    font-size: 13px;
+}
+.container_contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.box2 img{
+    border-radius: 0px 6px 6px 0px;
+    aspect-ratio: 16 / 9;
+    
+}
+.box2{
+    box-shadow: 4px 4px 4px 4px rgb(179, 179, 179);
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.nav{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+    box-shadow: 0 0 15px -5px #444;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    
+}
+.links{
+    display: flex;
+    gap: 5px;
+    height: 100%;
+}
+.logo{
+    padding-block: 15px;
+
+}
+.links a{
+    text-decoration: none;
+    color: #000;
+    padding-inline: 10px;
+    padding-block: 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;    
+}
+a:hover{
+    color: rgb(0, 104, 223)
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    border: 2px solid black;
+    width: 400px;
+    height: 350px;
+}
+.box p{
+    margin-top: 50px;
+    text-align: center;
+    color: red;
+}
+#below{
+    font-size: 12px;
+}

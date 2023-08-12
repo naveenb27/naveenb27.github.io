@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+}
+.nav{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+    box-shadow: 0 0 15px -5px #444;
+}
+.links{
+    display: flex;
+    gap: 5px;
+    height: 100%;
+}
+.logo{
+    padding-block: 15px;
+
+}
+.links a{
+    text-decoration: none;
+    color: #000;
+    padding-inline: 10px;
+    padding-block: 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;    
+}
+a:hover{
+    color: rgb(0, 104, 223)
+}
+.update_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.update_table{
+    width: 85%;
+
+}
+.update_table .head{
+    text-align: left;
+}
+.update_table th,td{
+    padding: 20px 0px;
+}
+table{
+    border: 1px solid #000;
+    border-radius: 24px;
+}
+.update_table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.update_table tr:hover{
+    background-color: #f2f2f2 #ddd;
+}
+.open, .update{
+    text-decoration: none;
+}
+.update_table th.first, td.first{
+    padding: 20px;
+}
+.update_table .last{
+    border-radius: 0px 0px 0px 24px;
+}
+.lastt{
+    border-radius: 0px 0px 0px 24px;
+}
