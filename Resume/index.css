@@ -224,7 +224,7 @@ section{
     overflow: hidden;
     position: relative;
     padding-block: 10px;
-    box-shadow: 2px 2px 0px 0px black;
+    box-shadow: 4px 4px 25px -5px black;
 }
 .projectplace:hover{
     cursor: pointer;
