@@ -314,3 +314,45 @@ section{
 h2{
     text-align: center;
 }
+#section5{
+    height:100vh;
+    background-image: url("237894-programming.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.form_container{
+    border:1px solid rgb(167, 156, 156);
+    padding: 15px;
+    border-radius: 24px;
+    box-shadow: 0px 0px 18px -5px ;
+}
+#in, #ina{
+    width:100%;
+}
+#in{
+    padding-block: 5px;
+}
+.btn1{
+    /* border:1px solid ; */
+    display: flex;
+    justify-content: center;
+}
+#in:focus, #ina:focus{
+    background-color: rgb(179, 255, 230);
+}
+#button{
+    padding: 9px;
+    border-radius: 6px;
+    border:1px solid darksalmon;
+    background-color: transparent;
+    color: #fff;
+}
+#button:hover{
+    background-color: darksalmon;
+    transform: scale(1.15);
+    border:1px solid #fff;
+    /* color: #000; */
+    cursor: pointer;
+}
