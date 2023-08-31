@@ -73,17 +73,20 @@ body{
     right: 50%;
 }
 .next .right, .next .left{
-    border: 1px solid pink;
-    background: linear-gradient(to right, rgba(11, 113, 209, 0.884), rgb(0, 255, 242));
+    border: 1px solid red;
+    /* background: linear-gradient(to right, rgba(11, 113, 209, 0.884), rgb(0, 255, 242)); */
     border-radius: 50%;
-    font-size: 24px;
+    padding: 5px;
+    position: relative;
+    /* display: inline; */
+    /* font-size: 24px; */
     color: rgb(0, 0, 0);
     margin-left: 20px;
-    box-shadow: 1px 1px 0px 0px black;
-}
-.next .left{
-    box-shadow: 0px 0px 1px 1px black;
+    /* box-shadow: 1px 1px 0px 0px black; */
 }
 .next .right:hover, .next .left:hover{
     cursor: pointer;
+    color: aliceblue;
+    background-color: red;
+    transform: scale(1.15);
 }

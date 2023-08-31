@@ -38,7 +38,7 @@
 a:hover{
     color: rgb(0, 104, 223)
 }
-.container{
+/* .container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,4 +55,4 @@ a:hover{
 }
 #below{
     font-size: 12px;
-}
+} */

@@ -9,25 +9,25 @@
 
 </head>
 <body>
-    <div class="home_container">
         <div class="nav">
             <span class="logo"><a href="index.html" ><img src="JSW_Group_logo.svg.png" width="100%" height="20px" class="log"></a></span>
             <span class="links">
-                <a href="" class="link">HOME</a>
-                <a href="">UPLOAD</a>
-                <a href="updat.html">UPDATE</a>
-                <a href="contact-us.html" class="link">CONTACT US</a>
-                <a href="about-us.html" class="link">ABOUT US</a>
+                <a href="" class="link active">Home</a>
+                <a href="updat.html">Update</a>
+                <a href="contact-us.html" class="link">Contact us</a>
+                <a href="about-us.html" class="link">About us</a>
             </span>
         </div>
-        <section id="sec1" class="sec1">
+    <div class="home_container">
+        <div id="sec1" class="sec1">
             <h1 style="text-align: center;" class="head1">
                 Get your schedule here
             </h1>
             <p class="para">Upload your yesterday's schedule plan to get today's schedule</p>
+            
             <button class="btn2" onclick="window.location.href='schedule.html'">Click here!</button>
+            
             <img src="pencil.png" alt="pencil" class="pencil" width="200px">
-            <img src="schedule.png" alt="schedule" class="schedule">
            <!-- 
             <div class="cloc">
                 <div class="hour">
@@ -41,35 +41,29 @@
                 </div>
                 <img src="clock.png" alt="clock" class="clock">
             </div>-->
-        </section>
-        
+        </div>
+        <div class="sechedule_img">
+            
+            <img src="How-to-schedule-TikTok-posts_Artboard-1-copy.svg" alt="schedule" class="schedule">
+        </div>
     </div>
     <div class="next">
         <span onclick="window.location.href='updat.html'" class="left">←</span>
         <span onclick="window.location.href='updat.html'" class="right">→</span>
     </div>
-    <!--
-    <script>
-        const hour = document.querySelector('.hr');
-        const min = document.querySelector('.min');
-        const sec = document.querySelector('.sec');
-
-
-
-        
-        setInterval(()=>{
-            let time = new Date();
-
-
-            let hh = time.getHours() * 30;
-            let mm = time.getMinutes() * 6;
-            let sc = time.getSeconds() * 6;
-            hour.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`
-            min.style.transform = `rotateZ(${mm}deg)`
-            sec.style.transform =  `rotateZ(${sc}deg)`
-        });
-        
-
-    </script> -->
+    <div class="howitswork">
+        <div class="boxx">
+            <h1>Choose you file</h1>
+        </div>
+        <div class="boxx">
+            <h1>Machine converts your file</h1>
+        </div>
+        <div class="boxx">
+            <h1>Download your file</h1>
+        </div>
+        <div class="boxx">
+            <h1>Give your feedback</h1>
+        </div>
+    </div>
 </body>
 </html>

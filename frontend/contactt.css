@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url('237894-programming.jpg');
+    background-size: cover;
+    background-attachment: fixed;    
+    backdrop-filter: blur(6px);
+}
+.nav{
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+    box-shadow: 0 0 15px -5px #444;
+
+}
+.links{
+    display: flex;
+    gap: 5px;
+    height: 100%;
+}
+.logo{
+    padding-block: 15px;
+
+}
+.links a{
+    text-decoration: none;
+    color: #fff;
+    padding-inline: 10px;
+    padding-block: 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;    
+}
+a:hover{
+    color: rgb(22, 0, 223)
+}
+
+
+.para{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: 1px solid;
+    box-shadow:  5px 5px 5px 5px black;
+    border-radius: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 600px;
+}
+.container_contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.contact{
+    margin-top: 30px;
+    width:100px;
+    padding: 7px 8px;
+    margin-bottom: 10px;
+    background: transparent;
+    border: 2px solid rgb(1, 51, 40);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 50;
+    box-shadow: 3px 3px 0px 0px black;
+ 
+}
+.contact:hover{
+    cursor: pointer;
+    background-color: rgb(1, 51, 40);
+    border-inline: #fff;
+}
+.image{
+    width:150px;
+}
+.para_c{
+    color: #fff;
+    text-align: center;
+    
+    margin-top: 30px;
+}
+h1{
+    color: #000;
+    text-transform: uppercase;
+    font-weight:bolder;
+    filter: drop-shadow(1px 2px 0px rgb(1, 51, 40));
+}
+.material-symbols-outline{
+    height: 20px;
+    color: black;
+}
+.ph{
+    color: green;
+}
+.ph a{
+    text-decoration: none;
+    color: #fff;
+}
+.socialmedia{
+    visibility: hidden;
+}
