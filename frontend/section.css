@@ -6,7 +6,7 @@ body{
 }
   
 .sec1 {
-    height: 90vh; 
+    height: 80vh; 
     /* scroll-snap-align: start;      */
 }
 
@@ -101,7 +101,7 @@ to{border-right-color: transparent;}
 .schedule{
     width: 500px;
     margin-top: 172px;
-    filter: drop-shadow(2px 4px 3px black);
+    filter: drop-shadow(0px 0px 15px -2px black);
 
 }
 /* .sec:before{
@@ -114,6 +114,7 @@ to{border-right-color: transparent;}
     border-radius: 50%;
 } */
 .home_container{
+
     display: flex;
     justify-content: center;
     /* border:1px  dashed #ff105e; */
@@ -121,4 +122,45 @@ to{border-right-color: transparent;}
     /* align-items: center; */
     /* align-items: center; */
     /* flex-direction: row; */
+}
+.howitswork{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+    gap: 40px;
+    
+}
+.boxx{
+    width: 300px;
+    border: 1px solid rgb(155, 151, 151);
+    border-radius: 21px;
+    padding-block: 30px;
+    padding-inline: 15px;
+}
+.boxx p{
+    color: rgb(100, 99, 99);
+}
+h3{
+    text-align: center;
+    margin-bottom: 50px;
+    /* letter-spacing: 1px; */
+}
+.expand{
+    border: 1px solid red;
+    bottom: 0;
+    margin-top: 100px;
+    border-radius: 50%;
+    
+}
+.e{
+    display: flex;
+    justify-content: center;
+}
+.expand:hover{
+    background-color: red;
+    color: white;
+    transform: scale(1.2);
+    cursor: pointer;
 }

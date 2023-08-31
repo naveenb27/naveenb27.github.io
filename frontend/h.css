@@ -1,0 +1,16 @@
+.h{
+    /* border: 1px solid red; */
+    overflow: hidden;
+    position: absolute;
+    margin-left: 300px;
+    animation: left_to_right 2s  ease-in;
+}
+@keyframes left_to_right {
+    from{
+        transform: translateX(-100px) translateY(200px);
+        /* transform: translateX(100px) translateY(-200px); */
+    }
+    to{
+        width: 100%;
+    }
+}
