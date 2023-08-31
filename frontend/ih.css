@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("photo-1575936123452-b67c3203c357.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    
+}

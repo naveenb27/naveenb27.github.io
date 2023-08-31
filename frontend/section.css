@@ -164,3 +164,97 @@ h3{
     transform: scale(1.2);
     cursor: pointer;
 }
+.foote{
+    background-color: #fff;
+}
+.footer{
+    height:250px;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(202, 195, 195);
+}
+.social{
+    display: flex;
+    gap: 60px;
+}
+.social li{
+    list-style: none;
+    margin-top: 4px;
+}
+.social h4{
+    font-size: larger;
+    margin-bottom: 8px;
+}
+.footer-input-button{
+    padding-block: 6px;
+    padding-inline: 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(237,44,73);
+    color: white;
+    background-color: rgb(237,44,73);
+    -webkit-text-stroke:1px;
+    letter-spacing: 2px;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.footer-input{
+    padding-block: 6px;
+    border-radius: 3px;
+    border: 1px solid rgb(131, 130, 130);
+}
+.cont h2, .cont p,.cont input{
+    margin-top: 10px;
+}
+.cont h2{
+    color: rgb(62,84,163);
+}
+.social h4{
+    letter-spacing: 3px;
+    -webkit-text-stroke: 0.5px;
+}
+.social li{
+    color: rgb(80, 80, 80);
+}
+.social li:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.foot-line-one{
+    /* border: 1px solid red; */
+    width: 70%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: center; */
+}
+.social-medias svg{
+    display: inline-block;
+    width: 40px;
+}
+.social-medias svg:hover{
+    cursor: pointer;
+}
+.foote-border{
+    display: flex;
+    justify-content: center;
+}
+.footer-input-button:hover{
+    cursor: pointer;
+    background-color: rgb(199, 30, 56);
+}
+.end{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-left: 100px;
+}
+.end a{
+    text-decoration: none;
+    color: black;
+}
+.end a:hover{
+    text-decoration: underline;
+}
