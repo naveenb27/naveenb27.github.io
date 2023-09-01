@@ -125,15 +125,27 @@ to{border-right-color: transparent;}
 }
 .howitswork{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap:wrap-reverse; */
     justify-content: center;
     text-align: center;
     margin-bottom: 40px;
     gap: 40px;
-    
+}
+.animate{
+    animation: left_to_right 2s linear;
+    overflow: hidden;
+}
+@keyframes left_to_right {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
 }
 .boxx{
     width: 300px;
+    height: 280px;
     border: 1px solid rgb(155, 151, 151);
     border-radius: 21px;
     padding-block: 30px;
@@ -148,7 +160,7 @@ h3{
     /* letter-spacing: 1px; */
 }
 .expand{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     bottom: 0;
     margin-top: 100px;
     border-radius: 50%;
@@ -264,4 +276,7 @@ h3{
 }
 .end a:hover{
     text-decoration: underline;
+}
+.boxx:hover{
+    box-shadow: 0px 0px 12px -6px black;
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
         <div class="nav">
-            <span class="logo"><a href="index.html" ><img src="JSW_Group_logo.svg.png" width="100%" height="20px" class="log"></a></span>
+            <span class="logo"><a href="index.html" ><img src="JSW_Group_logo.svg.png" width="100%" height="24px" class="log"></a></span>
             <span class="links">
                 <a href="" class="link active">Home</a>
                 <a href="updat.html">Update</a>
@@ -49,9 +49,9 @@
         
     </div>
     <div class="e">
-    <span class="material-symbols-outlined expand">
-        expand_more
-    </span>
+        <span class="material-symbols-outlined expand">
+            account_tree
+            </span>
     </div>
    <h3 style="margin-top: 20px;">HOW IT WORKS</h3>
     <div class="howitswork">
@@ -146,5 +146,33 @@
         <span onclick="window.location.href='updat.html'" class="right">→</span>
     </div> -->
     
+    <script>
+        const ele = document.querySelector(".howitswor");
+        const elementHeight = ele.clientHeight;
+        document.addEventListener('scroll', animate);
+
+        function inView(){
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY || window.pageYOffset;
+
+            const scrollpos = scrollY+windowHeight;
+            const elementPostion = ele.getBoundingClientRect().top+scrollY+elementHeight;
+        
+
+            if(scrollpos > elementPostion){
+                return true;
+            }
+            return false;
+        }
+
+        function animate(){
+            if(inView()){
+                ele.classList.add('animate');
+                console.log("true")
+            }
+        }
+
+    </script>
+
 </body>
 </html>
