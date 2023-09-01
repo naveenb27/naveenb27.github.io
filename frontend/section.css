@@ -125,7 +125,7 @@ to{border-right-color: transparent;}
 }
 .howitswork{
     display: flex;
-    /* flex-wrap:wrap-reverse; */
+    flex-wrap:wrap;
     justify-content: center;
     text-align: center;
     margin-bottom: 40px;
@@ -145,7 +145,7 @@ to{border-right-color: transparent;}
 }
 .boxx{
     width: 300px;
-    height: 280px;
+    /* height: 280px; */
     border: 1px solid rgb(155, 151, 151);
     border-radius: 21px;
     padding-block: 30px;
@@ -162,7 +162,7 @@ h3{
 .expand{
     /* border: 1px solid red; */
     bottom: 0;
-    margin-top: 100px;
+    margin-top: 0px;
     border-radius: 50%;
     
 }

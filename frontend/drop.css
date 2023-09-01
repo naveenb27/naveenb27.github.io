@@ -104,11 +104,13 @@ li{
 }
 footer{
     background-color: #fff;
+    
 }
 .FAQ-container{
     display: flex;
     /* align-items: center; */
     width: 100%;
+    /* background-color: rgb(245,246,250); */
     justify-content: center;
     font-size: 16px;
 }
