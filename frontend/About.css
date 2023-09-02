@@ -149,3 +149,18 @@ svg:hover{
     height:100vh;
     background-color: #000;
 }
+.projects{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.projects img{
+    aspect-ratio: 8/4;
+    width: 200px;
+}
+.project-p{
+    color:#fff;
+}
+.projection-container{
+    padding-inline: 40px;
+}
