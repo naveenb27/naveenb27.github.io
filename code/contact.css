@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.contacts{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-block: 15px;
+    align-items: center;
+}
+.form-contact{
+    /* border:1px solid black; */
+    width: 400px;
+    box-shadow: 0px 0px 12px -5px;
+    background-color: #fff;
+    padding:30px;
+    padding-block-end: 40px;
+    z-index:100;
+}
+.form-contact input[type="text"], input[type="email"], textarea{
+    width: 100%;
+    padding: 6px;
+    margin-block: 7px;
+    border: 1px solid rgb(252, 113, 125);
+}
+.btn{
+    padding: 6px;
+    width: 100%;
+    border: none;
+    background-color: rgb(252,58,74);
+    color: #fff;
+    -webkit-text-stroke: .5px;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 13px -7px black;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(252, 18, 38);
+}
+.container-contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 90px;
+}
+.contact-1{
+    width: 500px;
+}
+.contact-1 .p-1{
+    margin-bottom: 30px;
+}
+.contact-1 h1{
+    margin-bottom: 14px;
+    font-size: 28px;
+    letter-spacing: 2.3px;
+}
+h1{
+    font-size: 28px;
+}
+p{
+    color: rgb(80, 80, 80);
+}
+a{
+    color:rgb(80, 80, 80);
+}
+.form-contact input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+    background-color: rgb(192, 248, 229);
+    border: 1px solid rgb(252, 113, 125);
+}
+.section-contact{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: rgb(252, 18, 38);
+    margin-top: -100px;
+    z-index: -1;
+}
+.copyright p, .copyright a{
+    color: #ffffffda;
+    text-align: center;
+    bottom: 0;
+    padding-top: 120px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+    padding-block-start: 10px;
+    /* color:#000; */
+}
+.logo p{
+    font-size: 20px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.1px;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #000;
+    padding-inline: 10px;
+}
+.nav a:hover{
+    border: 1px solid lightblue;
+    color: #000;
+    background-color: lightblue;
+    border-radius: 21px;
+    -webkit-text-stroke: .5px;
+}
+.active-nav{
+    border: 1px solid lightblue;
+    color: #000;
+    background-color: lightblue;
+    border-radius: 21px;
+}
+.active-nav a{
+    color: #000;
+}

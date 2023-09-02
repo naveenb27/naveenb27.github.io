@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Barriecito&family=Crimson+Text:ital,wght@1,600&family=Faster+One&family=Inter:wght@300&family=Mukta:wght@200;300;400&family=Open+Sans:wght@300;400&family=Poppins:wght@100&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#section1{
+    background-color: rgb(234,242,253);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+    padding-block-start: 10px;
+    /* color:#000; */
+}
+.logo p{
+    font-size: 20px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.1px;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #000;
+    padding-inline: 10px;
+}
+.nav a:hover{
+    border: 1px solid lightblue;
+    color: #000;
+    background-color: lightblue;
+    border-radius: 21px;
+    -webkit-text-stroke: .5px;
+}
+.active-nav{
+    border: 1px solid lightblue;
+    color: #000;
+    background-color: lightblue;
+    border-radius: 21px;
+}
+.active-nav a{
+    color: #000;
+}
+p, a{
+    -webkit-text-stroke: .5px;
+}
+
+.container-1{
+    height:90vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    /* padding:8px 10px; */
+    width: 100px;
+    height: 35px;
+    -webkit-text-stroke: .5px;
+    border-radius: 12px;
+    border:none;
+}
+h2{
+    font-size: 18px;
+    padding-block-start: 10px;
+}
+.im{
+    /* border: 1px solid red; */
+    overflow: hidden;
+    width: 300px;
+    margin-left: 10px;
+    -webkit-text-stroke: 2px;
+    letter-spacing: 1.5px;
+    animation: left_to_right 5s ease-in-out; 
+    position: absolute;
+}
+@keyframes left_to_right {
+    from{
+        width: 0%;
+    }
+    to{
+        width:300px;
+    }
+}
+.button-1{
+    color: #fff;
+    background-color: rgb(35, 144, 216);
+}
+.button-2{
+    background-color:transparent;
+    border: 1px solid rgb(35, 144, 216);
+}
+button:hover{
+    cursor: pointer;;
+}
+.button-2:hover{
+    color: #fff;
+    background-color: rgb(35, 144, 216);
+}
+.section-container h3{
+    -webkit-text-stroke: 1px;
+    color: rgb(35, 144, 216);
+}
+.buttons{
+    padding-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.head-1{
+    font-size:35px;
+    /* border: 1px solid red; */
+    /* position: relative; */
+    /* overflow: hidden; */
+
+}
