@@ -1,5 +1,5 @@
 @import url('https://fontmeme.com/fonts/static/360879/hello-graduation-sans-font');
-
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Barriecito&family=Crimson+Text:ital,wght@1,600&family=Faster+One&family=Inter:wght@300&family=Mukta:wght@200;300;400&family=Open+Sans:wght@300;400&family=Poppins:wght@100&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
 
 *{
     margin:0;
@@ -114,13 +114,21 @@ section{
 }
 
 .home .content a{
-    background: #fff;
+    /* background: #fff; */
     padding:15px 35px;
-    color:#1680AC;
+    background: transparent;
+    border: 1px solid #fff;
     font-size:1.1em;
     font-weight:500;
+    color: #fff;
+    -webkit-text-stroke: .5px;
+    letter-spacing: 1.5px;
     text-decoration:none;
-    border-radius:2px;
+    border-radius:20px;
+}
+.home .content a:hover{
+    background-color: #fff;
+    color: #222;
 }
 
 .home .media-icons{
@@ -292,3 +300,6 @@ li.active{
     padding-block-start: 50px;
 }
 } 
+#list{
+    visibility: hidden;
+}

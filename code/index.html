@@ -32,39 +32,39 @@
         </header>
 
         <section class="home">
-            <video class="1 video-slide " src="v3.mp4" autoplay muted loop></video>
-            <video class="2 video-slide active" src="v2.mp4" autoplay muted loop></video>
-            <video class="3 video-slide" src="v3.mp4" autoplay muted loop></video>
-            <video class="4 video-slide" src="v1.mp4" autoplay muted loop></video>
-            <div class="1 content">
+            <video class="1 video-slide active" src="v1.mp4" autoplay muted loop></video>
+            <video class="2 video-slide" src="v2.mp4" autoplay muted loop></video>
+            <video class="3 video-slide" src="v1.mp4" autoplay muted loop></video>
+            <video class="4 video-slide" src="v2.mp4" autoplay muted loop></video>
+            <div class="1 content active">
                 <h1>MALDIVES!<br><span>Island</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
-                <a href="#">Read more</a>
+                <a href="explore.html">Read more</a>
             </div>
-            <div class="2 content active">
+            <div class="2 content">
                 <h1>Sea!<br><span>Shores</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
-                <a href="#">Read more</a>
+                <a href="explore.html">Read more</a>
             </div>
             <div class="3 content">
                 <h1>Off Road!<br><span>Rocks</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
-                <a href="#">Read more</a>
+                <a href="explore.html">Read more</a>
             </div>
             <div class="4 content">
                 <h1>Beautiful!<br><span>Sunset</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
-                <a href="#">Read more</a>
+                <a href="explore.html">Read more</a>
             </div>
 
         <div class="media-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/mr.rebhin_rj7/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/g_rebhin"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="slider-navigation">
-            <div class="1 nav-btn"></div>
-            <div class="2 nav-btn active"></div>
+            <div class="1 nav-btn active"></div>
+            <div class="2 nav-btn "></div>
             <div class="3 nav-btn"></div>
             <div class="4 nav-btn"></div>
         </div>
@@ -81,6 +81,7 @@
             
         }else{
                 menuBtn.classList.remove("active");  
+                document.getElementById("list").style.visibility = "hidden";
         }
     });
     const btns = document.querySelectorAll(".nav-btn");
