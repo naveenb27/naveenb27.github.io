@@ -11,10 +11,18 @@
 
         <header>
             <a href="#" class="brand">Travel</a>
-            <div class="menu-btn"></div>
+            <div class="menu-btn">
+                <div id="list">
+                <li class="active"><a class="active" href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                </div>
+            </div>
             <div class="navigation">
                 <div class="navigation-items">
-                    <a href="#">Home</a>
+                    <a class="active" href="#">Home</a>
                     <a href="about.html">About</a>
                     <a href="explore.html">Explore</a>
                     <a href="#">Gallery</a>
@@ -24,26 +32,26 @@
         </header>
 
         <section class="home">
-            <video class="video-slide active" src="v5.mp4" autoplay muted loop></video>
-            <video class="video-slide" src="v2.mp4" autoplay muted loop></video>
-            <video class="video-slide" src="v3.mp4" autoplay muted loop></video>
-            <video class="video-slide" src="v1.mp4" autoplay muted loop></video>
-            <div class="content active">
+            <video class="1 video-slide " src="v3.mp4" autoplay muted loop></video>
+            <video class="2 video-slide active" src="v2.mp4" autoplay muted loop></video>
+            <video class="3 video-slide" src="v3.mp4" autoplay muted loop></video>
+            <video class="4 video-slide" src="v1.mp4" autoplay muted loop></video>
+            <div class="1 content">
                 <h1>MALDIVES!<br><span>Island</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
                 <a href="#">Read more</a>
             </div>
-            <div class="content">
+            <div class="2 content active">
                 <h1>Sea!<br><span>Shores</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
                 <a href="#">Read more</a>
             </div>
-            <div class="content">
+            <div class="3 content">
                 <h1>Off Road!<br><span>Rocks</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
                 <a href="#">Read more</a>
             </div>
-            <div class="content">
+            <div class="4 content">
                 <h1>Beautiful!<br><span>Sunset</span></h1>
                 <p>Take your mind to heaven ,Travelling is an experience that can teach us so many things that you cannot possibly learn while living at home. Firstly, it teaches you how to make new friends. The world is full of people who love interacting.</p>
                 <a href="#">Read more</a>
@@ -55,50 +63,70 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="slider-navigation">
-            <div class="nav-btn active"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
+            <div class="1 nav-btn"></div>
+            <div class="2 nav-btn active"></div>
+            <div class="3 nav-btn"></div>
+            <div class="4 nav-btn"></div>
         </div>
     </section>
 
     <script type="text/javascript">
-    //Javacript of responsive navigation menu
+    
     const menuBtn= document.querySelector(".menu-btn");
     const navigation= document.querySelector(".navigation");
-
-    menuBtn.addEventListner("click", () => {
-        menuBtn.classList.toggle("active");
-        navigation.classList.toggle("active");
+    menuBtn.addEventListener("click", ()=>{
+        if(!menuBtn.classList.contains("active")){
+                menuBtn.classList.add("active");  
+                document.getElementById("list").style.visibility = "visible";
+            
+        }else{
+                menuBtn.classList.remove("active");  
+        }
     });
-
     const btns = document.querySelectorAll(".nav-btn");
     const slides = document.querySelectorAll(".video-slide");
     const contents = document.querySelectorAll(".content");
 
-    var slideshow = function(manual){
-        btns.forEach((btn) =>{
-            btn.classList.remove("active")
-        });
-
-        slides.forEach((slides) =>{
-            slides.classList.remove("active")
-        });
-
-        contents.forEach((content) =>{
-            content.classList.remove("active")
-        });
-
-        btns[manual].classListener("active");
-        slides[manual].classListener("active");
-        contents[manual].classListener("active");
-    }
     
-    btns.forEach((btn,i) => {
-        btns[manual].classListener("click",() => {
-            slideNav(i)
-        });
+    btns.forEach((e)=>{
+        e.addEventListener("click", ()=>{
+            btns.forEach((e)=>{
+                e.classList.remove("active");
+                document
+            })
+            e.classList.add("active");
+            btns.forEach((e)=>{
+                let a = e.classList;
+                if(a.contains("active")){
+                    active_pos = a[0];
+                    console.log(active_pos)
+                    contents.forEach((ee)=>{
+                        ee.classList.remove("active")
+                        console.log(ee.classList)
+                    })
+                    slides.forEach((ee)=>{
+                        ee.classList.remove("active")
+                        console.log(ee.classList)
+                    })
+                    contents.forEach((event)=>{
+                        if(event.classList.contains(active_pos)){
+                            event.classList.add("active");
+                            console.log(event.classList)
+                        }
+                    })
+                    slides.forEach((event)=>{
+                        if(event.classList.contains(active_pos)){
+                            event.classList.add("active");
+                            console.log(event.classList)
+                        }
+                    })
+                }
+            })
+        })
     })
+
+    
+
     </script>
     </body>
 </html>

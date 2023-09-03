@@ -67,6 +67,7 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 40px;
 }
 input[type="date"], input[type="text"]{

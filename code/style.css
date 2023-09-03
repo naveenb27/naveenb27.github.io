@@ -241,7 +241,7 @@ header .navigation .navigation-items a:before{
     height:5px;
 }
 
-header .navigation.active .navigation-items{
+header .navigation .navigation-items.active{
     background:#fff;
     width:600px;
     max-width:600px;
@@ -262,6 +262,7 @@ header .navigation.active .navigation-items{
     height:40px;
     cursor:pointer;
     transition:0.3s ease;
+    position: relative;
 }
 
 .menu-btn.active{
@@ -273,4 +274,21 @@ header .navigation.active .navigation-items{
     cursor:pointer;
     transition:0.3s ease;
 }
+ .menu-btn a{
+    text-decoration: none;
+    color: #fff;
 }
+.menu-btn a:hover{
+    text-decoration: underline;
+}
+.menu-btn li{
+    list-style: none;
+    padding-block: 5px;
+}
+#list{
+    visibility: hidden;
+}
+li.active{
+    padding-block-start: 50px;
+}
+} 
