@@ -116,3 +116,13 @@ button:hover{
     /* overflow: hidden; */
 
 }
+@media (max-width:1040px){
+    .container-1{
+        height:90vh;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding-inline-start: 20px;
+        flex-direction: column;
+    }   
+}
