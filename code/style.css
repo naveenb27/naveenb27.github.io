@@ -76,7 +76,7 @@ section{
     z-index:777;
     content:'';
     position:absolute;
-    background:rgba(1, 21, 56, 0.466);
+    /*background:rgba(1, 21, 56, 0.466);*/
     width:100%;
     height:100%;
     top:0;
@@ -110,6 +110,7 @@ section{
 }
 
 .home .content p{
+    font-weight:600;
     margin-bottom:65px;
 }
 
