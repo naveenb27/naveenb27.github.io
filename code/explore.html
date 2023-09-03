@@ -25,7 +25,7 @@
             <div class="buttons">
                 <div class="button-1">
                     <label for="calender">When?</label><br>
-                    <input type="date" id="calender" value="03-09-2023" placeholder="When?">
+                    <input type="date" id="calender" value="03/09/2023" placeholder="When?">
                 </div>
                 <div class="button-2">
                     <label for="where"></label><br>
@@ -121,5 +121,23 @@
             <div class="copyright">Copyrights © 2023 | Designed by Rebhin Jeevaraj, Naveen B & Ravindra Rathick | All rights reserved</div>         
         </div>
     </section>
+    <script>
+        // D d = new Date();
+        document.getElementById("calender").value="2023-09-06"
+    </script>
+    <style>    
+    .active-nav{
+        -webkit-text-stroke: 1px;
+        /* color: black; */
+        a{
+            color: black;
+        }
+    }
+    @media (max-width:600px) {
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    } </style>
 </body>
 </html>
