@@ -256,16 +256,3 @@ li:hover{
 .place-2{
     border-top: 1px solid black;
 }
-label{
-    -webkit-text-stroke: .7px;
-    color: #fff;
-    letter-spacing: 3px;
-    visibility: hidden;
-    text-align: center;
-    margin-left: 100px;
-}
-@media (max-width:600px) {
-    label{
-        visibility: visible;
-    }
-}
