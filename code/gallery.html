@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="explore.css">
 </head>
 <body>
+    <div class="menu-btn">
+        <div id="list">
+        <li class="active"><a class="active" href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+        </div>
+    </div>
     <div class="nav">
         <div class="logo">
             <p>TRAVEL</p>
@@ -17,7 +26,7 @@
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
             <a href="explore.html">Explore</a>
-            <a class="active-nav" href="contact-us.html">Contact</a>
+            <a class="active-nav" href="contact-us.html" style="color: black;">Contact</a>
         </div>
     </div>
     <section class="home">
@@ -82,13 +91,41 @@ btns.forEach((e)=>{
     })
 })
 
-
+    const menuBtn= document.querySelector(".menu-btn");
+    // const navigation= document.querySelector(".navigation");
+    menuBtn.addEventListener("click", ()=>{
+        if(!menuBtn.classList.contains("active")){
+                menuBtn.classList.add("active");  
+                document.getElementById("list").style.visibility = "visible";
+            
+        }else{
+                menuBtn.classList.remove("active");  
+                document.getElementById("list").style.visibility = "hidden";
+        }
+    });
 
 </script>
 <style>
+    .menu-btn{
+        display: none;
+    }
     .nav{
         background-color: black;
     }
+    .active-nav{
+        -webkit-text-stroke: 1px;
+        /* color: black; */
+        a{
+            color: black;
+        }
+    }
+    @media (max-width:600px) {
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    } 
+
 </style>
 </body>
 </html>
