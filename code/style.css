@@ -154,7 +154,7 @@ section{
     transform:scale(1.3);
 }
 
-.home video{
+.home video, .home img{
     z-index:000;
     position:absolute;
     top:0;

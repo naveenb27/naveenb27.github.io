@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <p>TRAVEL</p>
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#">Explore</a>
+            <a class="active-nav" href="contact-us.html">Contact</a>
+        </div>
+    </div>
+    <section class="home">
+        
+        <video class="1 video-slide active" src="v1.mp4" autoplay muted loop></video>
+        <video class="2 video-slide" src="v2.mp4" autoplay muted loop></video>
+        <video class="3 video-slide" src="v1.mp4" autoplay muted loop></video>
+        <video class="4 video-slide" src="v2.mp4" autoplay muted loop></video>
+        <img src="Explore-1.jpg" alt="Explore" class="5 video-slide">
+        <img src="Explore-2.jpg" alt="Explore" class="6 video-slide">
+        <img src="Explore-3.webp" alt="Explore" class="7 video-slide">
+        <img src="Explore-4.jpg" alt="Explore" class="8 video-slide">
+        <img src="Explore-5.jpg" alt="Explore" class="9 video-slide">
+        <img src="Explore-7.jpg" alt="Explore" class="10 video-slide">
+        <img src="Explore-8.png" alt="Explore" class="11 video-slide">
+        <!-- <img src="" alt="" class="12  video-slide"> -->
+        <div class="slider-navigation">
+            <div class="1 nav-btn active"></div>
+            <div class="2 nav-btn "></div>
+            <div class="3 nav-btn"></div>
+            <div class="4 nav-btn"></div>
+            <div class="5 nav-btn"></div>
+            <div class="6 nav-btn"></div>
+            <div class="7 nav-btn"></div>
+            <div class="8 nav-btn"></div>
+            <div class="9 nav-btn"></div>
+            <div class="10 nav-btn"></div>
+            <div class="11 nav-btn"></div>
+        </div>
+</section>
+
+<script type="text/javascript">
+
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".video-slide");
+
+
+btns.forEach((e)=>{
+    e.addEventListener("click", ()=>{
+        btns.forEach((e)=>{
+            e.classList.remove("active");
+            document
+        })
+        e.classList.add("active");
+        btns.forEach((e)=>{
+            let a = e.classList;
+            if(a.contains("active")){
+                active_pos = a[0];
+                console.log(active_pos)
+                slides.forEach((ee)=>{
+                    ee.classList.remove("active")
+                    console.log(ee.classList)
+                })
+                slides.forEach((event)=>{
+                    if(event.classList.contains(active_pos)){
+                        event.classList.add("active");
+                        console.log(event.classList)
+                    }
+                })
+            }
+        })
+    })
+})
+
+
+
+</script>
+<style>
+    .nav{
+        background-color: black;
+    }
+</style>
+</body>
+</html>

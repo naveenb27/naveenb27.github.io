@@ -116,7 +116,7 @@ button:hover{
     /* overflow: hidden; */
 
 }
-@media (max-width:600px){
+@media (max-width:1040px){
     .container-1{
         height:90vh;
         display: flex;
