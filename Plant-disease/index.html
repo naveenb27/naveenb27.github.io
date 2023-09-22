@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Diease Detector</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            TEAM_ELITE
+        </div>
+        <div class="navigation">
+            <li>Home</li>
+            <li onclick="window.location.href='#blog'">Blog</li>
+            <li onclick="window.location.href='#sec2'">Diease detector</li>
+        </div>
+    </div>
+    <div class="section-1-container">
+        <div class="section-1">
+            <img src="plants.webp" alt="plants">
+        </div>
+    
+    <div class="cointainer">
+        <h1  class="head">Upload & Get solution</h1>
+        <p>Upload diease plant and know what reason behind it with solution.</p>
+        <button class="btn" onclick="window.location.href='#sec2'">CLICK HERE</button>
+    </div>
+    </div>
+    <h1 style="text-align: center; text-decoration: underline; margin-bottom: 10PX;">Disease Detector</h1>
+    <div id="sec2" class="upload">
+        <div id="upload-container" class="upload-container">
+            <label id="btn-submit" for="photo">Choose a photo</label>
+            <input id="photo" type="file">
+
+        </div>
+        <div class="details">
+            <h1  id="info">Info</h1>
+            <p id="answer"><p>
+        </div>
+    </div>
+    <div id="blog" class="blogs">
+        <h1 style="text-align: center; text-decoration: underline;">Blogs</h1>
+        <div class="blo">
+            <div class="blog blog-1">
+                <img src="grape-disease.webp" alt="grape disease">
+                <h1>Grapes Disease</h1>
+                <div class="bl-btn">
+                    <button onclick="window.location.href='grape-disease.html'"class="btn-blog">Read more</button>
+                </div>
+            </div>
+            <div class="blog blog-2">
+                <img src="fungal attack.jpg" alt="fungal attack">
+                <h1>Fungal attack</h1>
+                <div class="bl-btn">
+                    <button onclick="window.location.href='fungal-disease.html'" class="btn-blog">Read more</button>
+                </div>
+            </div>
+            <div class="blog blog-3">
+                <img src="Tomato-bacteria diease.webp" alt="Tomato Bacteria">
+                <h1>Tomato bacteria</h1>
+                <div class="bl-btn">
+                    <button onclick="window.location.href='tomato-bacteria.html'"  class="btn-blog">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Designed by <i>Chandru T & Naveen B</i></p>
+    </footer>
+</body>
+    <script>
+        const dropZone = document.getElementById('upload-container');
+        const fileInput = document.getElementById('photo');
+        const p = document.getElementById("answer");
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.style.border = '2px dashed green';
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.style.border = '2px solid rgba(228, 10, 10, 0.39)';
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.style.border = '2px solid rgba(228, 10, 10, 0.39)';
+            
+            const droppedFile = e.dataTransfer.files[0];
+
+        if (droppedFile) {
+            fileInput.files = e.dataTransfer.files;
+            handleFile(droppedFile);
+            }
+        });
+
+        function handleFile(file) {
+            let filee = file.name.split(".");
+            let file_len = filee.length-1;
+            
+            const lastIndex = filee[file_len];
+
+            if(lastIndex === "png"){
+                p.style.color = "green";
+                dropZone.style.border = '2px solid none';
+                p.innerHTML = "Infectious plant diseases are caused by a pathogenic organism such as a fungus, bacterium, mycoplasma, virus, viroid, nematode, or parasitic flowering plant. An infectious agent is capable of reproducing within or on its host and spreading from one susceptible host to another.";
+            }else{
+                p.style.color = "green"
+                p.innerHTML = "Infectious plant diseases are caused by a pathogenic organism such as a fungus, bacterium, mycoplasma, virus, viroid, nematode, or parasitic flowering plant. An infectious agent is capable of reproducing within or on its host and spreading from one susceptible host to another.";
+            }
+            console.log('File dropped:', file.name);
+        }
+    </script>
+</html>
