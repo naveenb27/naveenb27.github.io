@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-box">
+            <h1 style="margin-bottom: 5px;" class="head">To do list</h1>
+            <div style="margin-bottom: 20px;" class="form">
+                <input type="text" placeholder="Enter something..." id="list">
+                <div class="btn-container">
+                    <button class="btn">Add</button>
+                </div>
+            </div>
+            <div class="remove">
+                Remove list
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        Designed & Implemented by <i>Naveen_B</i>
+    </div>
+    <script>
+        const listElement = document.querySelector('#list');
+        const btnElement = document.querySelector('.btn');
+        const tasksElement = document.querySelector('.container-box');
+        const remove = document.querySelector('.remove');
+
+
+   
+        remove.addEventListener('click', () => {
+            const listItemElements = document.querySelectorAll('#listItem');
+
+            listItemElements.forEach(listItemElement => {
+            listItemElement.textContent = '';
+            });
+        })
+
+        btnElement.addEventListener('click', () => {
+        const task = listElement.value;
+        listElement.value = '';
+
+        const listItemElement = document.createElement('p');
+        listItemElement.setAttribute('id', 'listItem');
+
+        listItemElement.addEventListener('dblclick', () => {
+        listItemElement.style.textDecoration = 'line-through';
+        });
+
+        tasksElement.appendChild(listItemElement);
+        listItemElement.textContent = task;
+
+        tasksElement.appendChild(listItemElement);
+        });
+        listItemElement.addEventListener('dblclick', () => {
+        listItemElement.style.textDecoration = 'line-through';
+        });
+
+    </script>
+</body>
+</html>
