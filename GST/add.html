@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add customers</title>
+</head>
+<body>
+    <div class="container">
+        <label for="">Customer Name:</label>
+        <input class="name" type="text">
+        <br>
+
+        <label for="">Address: </label>
+        <textarea class="add" placeholder="Enter the address"></textarea>
+        <br>
+
+        <label for="">Gst No: </label>
+        <input type="text" name="gst" id="gst">
+
+        <div class="btn">
+            <button class="btnn">Submit</button>
+        </div>
+
+    </div>
+
+
+    <script src="data/customers.js"></script>    
+    <script>
+        customers = JSON.parse(localStorage.getItem('customers')) || [];
+        const btn = document.querySelector('.btnn');
+
+        btn.addEventListener(('click'), ()=>{
+            const name = document.querySelector('.name').value;
+            const add = document.querySelector('.add').value;
+            const gst = document.querySelector('#gst').value;
+
+            customers.push({to: name, address: add, gst_no: gst});
+            localStorage.setItem('customers', JSON.stringify(customers));
+            console.log(customers);
+        })
+    </script>
+
+    
+    <style>
+        body {
+        font-family: sans-serif;
+        margin: 0;
+        }
+
+        .container {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        background-color: #f5f5f5;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .container label {
+        font-size: 16px;
+        margin-bottom: 5px;
+        }
+
+        .container input,
+        .container textarea {
+        margin-inline: 60px;
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 15px;
+        margin-bottom: 15px;
+        }
+
+        .container textarea {
+        resize: vertical; /* Allow users to resize the textarea */
+        }
+
+        .btn button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+
+        .btn button:hover {
+        background-color: #3e8e41;
+        }
+
+        .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        }
+
+    </style>
+</body>
+</html>

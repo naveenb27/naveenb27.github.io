@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Bill</title>
+</head>
+<body>
+    <div class="container">
+        <label for="">Customer Name: </label>
+        <select name="custom" id="customers"></select>
+        <br>
+
+        <label for="">Invoice Number: </label>
+        <input class="invoice-no" type="number">
+        <br>
+
+        <label for="">Invoice Date: </label>
+        <input class="invoice-date" type="date">
+        <br>
+
+        <label for="">HSN Code: </label>
+        <input class="hsn" type="number">
+        <br>
+
+        <label for="">Rate: </label>
+        <input class="rate" type="number">
+        <br>
+
+        <label for="">Qty: </label>
+        <input class="qty" type="number">
+        <br>
+
+        <label for="">Amount: </label>
+        <input class="amt" type="number">
+        <br>
+
+        <label for="">GST%: </label>
+        <input class="gst" type="number">
+        <br>
+
+        <div class="btn">
+            <button class="btnn">
+                Submit
+            </button>
+        </div>
+
+    </div>
+
+    <script src="data/customers.js"></script>
+    <script>
+        let html = '';
+
+        customers.forEach((customer, index) => {
+            const {to, address, gst_no} = customer;
+            html+=`
+                <option value=${to}>${to}</option>
+                `
+
+       });
+        document.querySelector('#customers').innerHTML = html;
+
+
+        const btnClick = document.querySelector('.btnn');
+
+        btnClick.addEventListener(('click'), ()=>{
+            const cus = document.querySelector('#customers').value;
+            const no = document.querySelector('.invoice-no').value;
+            const date = document.querySelector('.invoice-date').value;
+            const hsn = document.querySelector('.hsn').value;
+            const rate = document.querySelector('.rate').value;
+            const qty = document.querySelector('.qty').value;
+            const amt = document.querySelector('.amt').value;
+            const gst = document.querySelector('.gst').value;
+
+            const query = `?cus=${cus}&no=${no}&date=${date}&hsn=${hsn}&rate=${rate}&qty=${qty}&amt=${amt}&gst=${gst}`;          
+            window.location.href = 'GST.html'  +query;
+        });
+    </script>
+
+    <style>
+        body {
+        font-family: sans-serif;
+        margin: 20px;
+        }
+
+        .container {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        }
+
+        .container label {
+        display: block;
+        margin-bottom: 5px;
+        }
+
+        .container input,
+        .container select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        }
+
+        .btn {
+        text-align: center;
+        }
+
+        .btn button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .btn button:hover {
+        background-color: #3e8e41;
+        }
+
+    </style>
+</body>
+</html>

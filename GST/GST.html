@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Poppins:wght@300&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        tr{
+            border-bottom: 1px solid black;
+        }
+
+        body{
+            margin: 20px;
+        }
+
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+
+        .head-11{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .title{
+            display: flex;
+            align-items: center;
+            font-size: xx-large;
+            justify-content: center;
+        }
+
+        .address{
+            text-align: center;
+        }
+
+        .row-2{
+            text-align: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-3{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col-1, .col-2{
+            width: 50%;
+        }
+        
+        .col-1{
+            border-right: 1px solid black;
+            margin-right: 5px;
+        }
+
+        .row-4{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .row-4 td{
+            border-left: 1px solid black;
+            padding-inline: 2%;
+        }
+
+        .row-5{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .row-5 td{
+            border-left: 1px solid black;
+            padding-inline: 2%;
+            padding-bottom: 30px;
+        }
+
+        .row-6{
+            display: flex;
+        }
+
+        .row-6 td{
+            border-right: 1px solid black;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            padding-left: 2%;
+        }
+
+        .row-7{
+            display: flex;   
+        }
+
+        .bank-details{
+            border-right: 1px solid black;
+        }
+
+        .row-7 td{
+            border-right: 1px solid black;
+            padding-top: 5px;
+        }
+
+        .row-8{
+            display: flex;
+        }
+        
+        .row-8 td{
+            border-right: 1px solid black;
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td class="row-1">
+                <div class="head-11">
+                    <p>GST IN : 33CJIPB3138B1ZX </p>
+                    <p>PHONE NO : 9790092024 </p>
+                </div>
+
+                <div class="pan-no">
+                    <p>PAN NO : CJIPB3138B</p>                   
+                </div>
+
+                <div class="title">
+                    <img src="image/lordMurugan.png" alt="Murugan" width="70px" height="90px" class="lord-murugan">
+                    <h1>BALU TEX</h1>
+                </div>
+
+                <div class="address">
+                    <p>No.236/4, Narasimhan Kovil Opposite Street,</p>
+                    <p>ALLIKUTTAI, SALEM – 636003.</p>
+                </div>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td class="row-2">
+                <p class="Tax-invoice"><b>TAX INVOICE</b></p>
+            </td>
+        </tr>
+
+        <tr class="row-3">
+            <td class="col-1">
+                <p class="namee">To: </p>
+                <p class="Address"></p>
+                <p><b>GST Number: </b></p>
+                <p class="GST"></p>
+            </td>
+            
+            <td class="col-2">
+                <p class="Invoice-No"><b>Invoice Number : </b></p>
+                <p class="Invoice-date"><b>Invoice Date : </b></p>
+            </td>
+        </tr>
+
+        <tr class="row-4">
+            <td style="width: 5%;">S.No</td>
+            <td style="width: 20%;">PARTICULAR</td>
+            <td style="width: 10%;">HSN CODE</td>
+            <td style="width: 10%;">RATE</td>
+            <td style="width: 10%;">QTY</td>
+            <td style="width: 18%;">AMOUNT</td>
+        </tr>
+
+        <tr class="row-5">
+            <td class="sno" style="width: 5%;">01</td>
+            <td class="parti" style="width: 20%;">DYED POLY</td>
+            <td class="hsn" style="width: 10%;">0000</td>
+            <td class="rate" style="width: 10%;">000</td>
+            <td class="qty" style="width: 10%;">00.00</td>
+            <td class="amtt" style="width: 18%;">000000</td>
+        </tr>
+
+        <tr class="row-6">
+            <td style="width: 51.8%;" class="rupee"><b>Rupees: </b></td>
+            <td style="width: 31%;">Total Amount Before<br> Tax</td>
+            <td style="width: 18%;" class="amount-before-tax"></td>
+        </tr>
+
+        <tr class="row-7">
+            <td style="width: 51.8%; padding-left: 3px; padding-bottom: 10px;" class="bank-details">
+                <p style="padding-block: 3px; text-align: center; text-decoration: underline;">Bank Details</p>
+                <p style="padding-block: 3px;" class="name">Bank Name : HDFC</p>
+                <p style="padding-block: 3px;" class="branck">Bank Branch : Second Agraharam</p>
+                <p style="padding-block: 3px;" class="accNo">Account Number : 50200047664830</p>
+                <p style="padding-block: 3px;" class="ifcs">IFCS Code : HDFC0001590</p>
+            </td>
+
+            <div class="row-7-container">
+                <td style="width: 31%;">
+                   <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;">CSGT</p>
+                   <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;">SGST</p>
+                   <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;">TOTAL AMOUNT[GST]</p>
+                   <p style="padding-left: 2%;">GRAND TOTAL</p>
+                </td>
+                <td style="width: 18%;">
+                    <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;" class="cgst"></p>
+                    <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;" class="sgst">0.00</p>
+                    <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;" class="gst-total">0.00</p>
+                    <p style="padding-left: 2%;"  class="grand-amt">0.00</p>
+                </td>
+            </div>
+        </tr>
+
+        <tr class="row-8">
+            <td style="width: 52.8%;" class="row-8-col-1">
+                <p style="padding: 2px;"><b>TERMS & CONDITIONS :</b></p>
+                <p style="padding: 2px; font-size: 12px;">1. GOODS ONCE SOLD CAN NOT TAKEN BACK OR EXACHANGED</p>
+                <p style="padding: 2px; font-size: 12px;">2. INTERST AT 24% WILL BE CHARGED IF NOT PAID ON PRESENTATION. </p>
+                <p style="padding: 2px; font-size: 12px;">3. OUR RESPONSIBILITY CEASES ONCE THE GOODS LEAVE OUR GODOWN. </p>
+                <p style="padding: 2px; font-size: 12px;">4. ALL SUBJECT TO SALEM JURISDICTION ONLY </p>
+            </td>
+            <td style="width: 50%;" class="row-8-col-2">
+                <p style="text-align: center; font-size: 8px;">CERFICATED THAT THE PARTICULAR GIVEN ABOVE ARE TRUE AND CORRECT</p>
+                <h1 style="text-align: center;">BALU TEX</h1>
+                <div class="img">
+                    <img src="image/sign.png" alt="sign">
+                </div>
+                <p style="text-align: center;">PROPRIETOR</p>
+            </td>
+        </tr>
+    </table>
+
+    <button class="printt" onclick="printPage()">
+        Print
+    </button>
+
+    <script src="data/customers.js"></script>
+    <script>
+        const par = new URLSearchParams(window.location.search);
+
+        const cus = par.get('cus');
+        const no = par.get('no');
+        const date = par.get('date');
+        const hsn = par.get('hsn');
+        const rate = par.get('rate');
+        const qty = par.get('qty');
+        const amt = par.get('amt');
+        const gst = par.get('gst');
+
+        
+        let c = [];
+
+        let addres;
+        let gst_num;
+        let name;
+        customers.forEach((obj, index) => {
+            const {to, address, gst_no} = obj;
+
+            const val = to.split(" ");
+            let word = val[0];
+
+
+            if(word === cus){
+                addres = address;
+                gst_num = gst_no;
+                name = to;
+            }
+        });
+        const per = Number(Number(gst)/2)/100;
+        const csgt = (Number(amt)*per).toFixed(2);
+        const sgst = (Number(amt)*per).toFixed(2);
+        const gst_total = Number(csgt) + Number(sgst);
+        const grand_total = (Number(amt) + Number(gst_total)).toFixed(0);
+
+        document.querySelector(".namee").innerHTML = "<b>To:"+name;
+        document.querySelector(".Address").innerHTML = addres;
+        document.querySelector(".GST").innerHTML = gst_num;
+        document.querySelector(".Invoice-No").innerHTML += no;
+        document.querySelector(".Invoice-date").innerHTML += date;
+        document.querySelector(".hsn").innerHTML = hsn;
+        document.querySelector(".rate").innerHTML = rate;
+        document.querySelector(".qty").innerHTML = qty;
+        document.querySelector(".amtt").innerHTML = amt;
+        document.querySelector(".amount-before-tax").innerHTML = amt;
+        document.querySelector(".rupee").innerHTML +=" "+ test(grand_total) +"Only/-";
+        
+        document.querySelector(".cgst").innerHTML = csgt;
+        document.querySelector(".sgst").innerHTML = sgst;
+        document.querySelector(".gst-total").innerHTML = gst_total;
+        document.querySelector(".grand-amt").innerHTML = grand_total;
+
+        function printPage(){
+            document.querySelector(".printt").innerHTML='';
+            window.print();
+        }
+
+
+        function test(n) {
+        if (n < 0)
+            return false;
+        
+        // Arrays to hold words for single-digit, double-digit, and below-hundred numbers
+        single_digit = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
+        double_digit = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen']
+        below_hundred = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
+        
+        if (n === 0) return 'Zero';
+        
+        function translate(n) {
+            let word = "";
+            if (n < 10) {
+                word = single_digit[n] + ' ';
+            } else if (n < 20) {
+                word = double_digit[n - 10] + ' ';
+            } else if (n < 100) {
+                let rem = translate(n % 10);
+                word = below_hundred[(n - n % 10) / 10 - 2] + ' ' + rem;
+            } else if (n < 1000) {
+                word = single_digit[Math.trunc(n / 100)] + ' Hundred ' + translate(n % 100);
+            } else if (n < 1000000) {
+                word = translate(parseInt(n / 1000)).trim() + ' Thousand ' + translate(n % 1000);
+            } else if (n < 1000000000) {
+                word = translate(parseInt(n / 1000000)).trim() + ' Million ' + translate(n % 1000000);
+            } else {
+                word = translate(parseInt(n / 1000000000)).trim() + ' Billion ' + translate(n % 1000000000);
+            }
+            return word;
+        }
+        
+        let result = translate(n);
+        return result.trim() + ' ';
+    }
+
+    </script>
+</body>
+</html>

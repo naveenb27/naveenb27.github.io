@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+    <style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        text-align: center; 
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px; 
+    }
+
+
+    .container button {
+        padding: 20px; 
+        background-color: #4CAF50; 
+        color: white;
+        border: none;
+        border-radius: 5px; 
+        font-size: 16px;
+        cursor: pointer;
+        flex: 1;
+        margin-bottom: 10px; 
+        transition: background-color 0.3s ease; 
+    }
+
+    .container button:hover {
+        background-color: #3e8e41; 
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    </style>
+
+<body>
+    <h1 style="text-align: center;">வருக அப்பா!</h1>
+
+    <div class="container">
+        <button onclick="window.location.href='details.html'" class="customers-details">
+            வாடிக்கையாளர் விவரங்கள்
+        </button>
+        <button onclick="window.location.href='add.html'" class="add-customers">
+            வாடிக்கையாளர் விவரங்களைச் சேர்க்கவும்
+        </button>
+        <button class="edit-customer">
+            வாடிக்கையாளர் விவரங்களைத் திருத்த
+        </button>
+        <button onclick="window.location.href='Generate.html'" class="generate-bill">
+            GST Bill உருவாக்கவும்
+        </button>
+    </div>
+</body>
+</html>
