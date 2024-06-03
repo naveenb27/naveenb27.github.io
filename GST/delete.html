@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete the customer</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+    <div class="container"></div>
+
+    <script src="data/customers.js"></script>
+    <script>
+        let html = ` <table id="customers" width="100%">
+            <tr>
+                <th>Customer Name </th>
+                <th>Address </th>
+                <th>GST Number</th>
+                <th>Delete</th>
+            </tr>
+       `;
+
+       customers.forEach((customer, index) => {
+            const {to, address, gst_no} = customer;
+            html+=`<tr>
+                    <td>${to}</td>
+                    <td>${address}</td>
+                    <td>${gst_no}</td>
+                    <td><button class="btn" onclick="delet(${index})">Delete</button></th>
+                </tr>`
+
+       });
+
+       html +=`</table>`
+        document.querySelector('.container').innerHTML = html;
+
+        function delet(index){
+            customers.splice(index, 1);
+
+            localStorage.setItem('customers', JSON.stringify(customers));
+            alert("Deleted  Successfully.");
+            
+            window.location.href='delete.html';
+        }
+    </script>
+
+</body>
+</html>

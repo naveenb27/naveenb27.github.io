@@ -38,6 +38,9 @@
             customers.push({to: name, address: add, gst_no: gst});
             localStorage.setItem('customers', JSON.stringify(customers));
             console.log(customers);
+
+            alert("Added Successfully.");
+            window.location.href='add.html';
         })
     </script>
 
