@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'karla-bold';
+    src: url('/assets/fonts/static/Karla-Bold.ttf') as format('ttf');
+}
+
+@font-face {
+    font-family: 'kerla-regular';
+    src: url('/assets/fonts/static/Karla-Regular.ttf') as format('ttf');
+}
+
+:root {
+    --Greenlighter: hsl(148, 38%, 91%);
+    --Greenmedium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+    --White: hsl(0, 0%, 100%);
+    --Greymedium: hsl(186, 15%, 59%);
+    --Greydarker: hsl(187, 24%, 22%);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    background-color: var(--Greenlighter);
+}
+
+input:hover{
+    cursor: pointer;
+    outline: 1px solid var(--Greenmedium);    
+}
+
+input, textarea{
+    padding: 4px;
+}
+
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+h1{
+    font-size: 28px;
+    color: var(--Greydarker);
+    font-family: 'karla-bold', sans-serif;
+    margin-bottom: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'kerla-regular', sans-serif;
+    box-sizing: border-box;
+}
+
+input[type="radio"]{
+    width: 19px;
+    height: 19px;   
+}
+
+.clicked{
+    background-color: var(--Greenlighter);
+}
+
+label{
+    font-size: small;
+}
+.container {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--White);
+    width: 600px;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.container section {
+    margin-block: 10px;
+}
+
+.error{
+    color: var(--Red);
+    font-size: 12px;
+    padding-block: 5px;
+}
+.name {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.name div{
+    flex: 1;
+}
+
+.name input[type="text"]{
+    margin-top: 4px;
+    padding-block: 6px;
+    width: 100%;
+}
+
+input:focus, textarea:focus{
+    outline: 1px solid var(--Greenmedium);      
+}
+
+.btn:hover{
+    background-color: hsl(169, 85%, 15%);
+}
+
+.agr{
+    display: flex;
+    gap: 10px;
+}
+input[type="email"] {
+    margin-top: 4px;
+    width: 100%;
+    padding-block: 7px;
+}
+
+.query-container {
+    display: flex;
+    gap: 3%;
+    margin-top: 5px;
+}
+
+
+.query-container div {
+    border: 1px solid #555;
+    width: 50%;
+    padding-block: 12px;
+    align-items: center;
+    gap: 5px;
+    display: flex;
+    padding-inline-start: 10px;
+    border-radius: 3px;
+}
+
+.general:hover, .support:hover, .general label:hover, .support label:hover{
+    cursor: pointer;
+}
+
+.select{
+    background-color: var(--Greenlighter);
+    outline: 1px solid var(--Greenlighter);
+}
+
+textarea {
+    margin-top: 5px;
+    width: 100%;
+    padding-block: 3px;
+    height: 100px;   
+    overflow: hidden;
+    resize: none;
+    border-radius: 6px;
+}
+
+.btn {
+    width: 100%;
+    padding-block: 10px;
+    background-color: var(--Greenmedium);
+    color: var(--White);
+    border: none;
+    border-radius: 7px;
+}
+
+label{
+    font-size: 12px;
+}
+
+.contain{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 105vh;
+    overflow: hidden;
+    background-color: var(--Greenlighter);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.messageSent{
+    background-color: var(--Greydarker);
+    color: var(--White);
+    position: absolute;
+    padding: 12px;
+    padding-inline: 40px;
+    border-radius: 8px;
+}
+
+.messageSent p{
+    font-size: 12px;
+}
+
+.msgSent{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-block-end: 6px;
+}
+
+.con{
+    width: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    background-color: var(--White);
+
+}
