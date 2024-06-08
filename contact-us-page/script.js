@@ -131,13 +131,15 @@ function val(){
 } 
 
 function submitForm(){
-    const con = document.querySelector(".con");
+    const con = document.querySelector(".messageSent");
 
-    setInterval(()=>{
-        con.style.display = "block";
+    con.style.display = "block";
+    setTimeout(()=>{
+        con.style.display = "none";
     }, 2000);
 
-    con.style.display = "none";
+
+    
 }
 
 btn.addEventListener(('click'), ()=>{
