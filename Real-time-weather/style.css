@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;;
+}
+
+body{
+    background-color: rgb(129, 176, 251);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 21px;
+    align-items: center;
+    padding: 40px;
+}
+
+.location-display{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    align-items: center;
+    width: 200px;
+    font-size: 20px;
+    margin-top: 20px;
+    gap: 5px;
+    padding-block: 4px;
+    color: rgb(2, 82, 210);
+}
+
+.location-display .location{
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.form{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="text"]{
+    border: 1px solid rgb(38, 38, 255);
+    border-radius: 5px;
+    height: 40px;
+    min-width: 300px;
+    background-color: rgb(155, 199, 255);
+    border: none;
+    outline: 1px solid rgb(114, 175, 255);
+    color: rgb(255, 255, 255);
+    padding-inline: 8px;
+    font-size: 16px;
+    padding-block: 4px;
+    font-weight: 600;
+    color: rgb(2, 82, 210);
+}
+
+input[type="text"]::placeholder{
+    color: rgb(2, 82, 210);;
+}
+
+input[type="text"]:focus{
+    background-color: rgb(151, 196, 255);
+    
+}
+
+.btn{
+    border-radius: 4px;
+    padding-inline: 6px;
+    padding-block: 3px;
+    color: white;
+    background-color: rgb(49, 112, 195);
+    box-shadow: rgba(58, 52, 96, 0.15) 0px 48px 100px 0px;
+}
+#map { height: 180px; }
+
+.btn span{
+    margin: 4px auto;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(24, 115, 234);
+}
+
+.weather-symbol{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.weather{
+    position: absolute;
+    top: 35px;
+    margin-left: -20px;
+    color: white;
+}
+
+.number{
+    line-height: 5.2rem;
+    font-size: 80px;    
+    margin-bottom: 10px;
+    color: rgb(2, 82, 210);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.map {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.condition{
+    color: rgb(2, 82, 210);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 2rem;
+}
+
+.other-display{
+    border: 1px solid #f4ebeb;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 34px;
+    background-color: #eaf3ff;
+    display: flex;
+    width: 360px;
+    justify-content: space-between;
+}
+
+.other-display .name{
+    color: rgb(2, 82, 210);
+    opacity: 50%;
+}
+
+.mid{
+    color: rgb(4, 78, 198); 
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.other-display div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+}
