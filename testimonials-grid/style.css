@@ -26,7 +26,7 @@ body{
     /* background-color: white; */
     display: grid;   
     gap: 20px;
-    margin: 55px auto;
+    margin: 100px auto;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -149,10 +149,4 @@ body{
         grid-column: 1;
     }
 }
-
-@media (max-width: 1440px){
-    .container{
-        width: calc(100%-20px);
-        margin: 10px;
-    }
 }
