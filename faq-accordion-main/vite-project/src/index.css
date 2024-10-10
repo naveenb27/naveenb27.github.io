@@ -1,0 +1,117 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --LightPink: hsl(275, 100%, 97%);
+  --GrayishPurple: hsl(292, 16%, 49%);
+  --DarkPurple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--LightPink);
+}
+
+
+.desktop-banner {
+  width: 100%;
+}
+
+.mobile-banner {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .mobile-banner {
+    display: block;
+  }
+
+  .desktop-banner {
+    display: none;
+  }
+
+  .faq-section{
+    width: 90%;
+  } 
+}
+
+.head {
+  display: flex;
+  gap: 15px;
+  font-size: 21px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.head h1{
+  color: var(--DarkPurple);
+}
+
+.lists {
+  border-bottom: 0.5px solid #ccc;  
+  padding-bottom: 30px;
+}
+
+li {
+  list-style: none;
+  padding-block: 20px;
+  font-weight: 900;
+  /* color: var(--DarkPurple); */
+  font-size: larger;
+}
+
+.container {
+  position: relative; /* Change display to position */
+}
+
+.faq-section {
+  position: absolute; /* Ensure this is position, not display */
+  display: flex;
+  justify-content: center;
+  max-width: 650px; 
+  top: 0;
+  background-color: white;
+  margin: 0 auto;
+  flex-direction: column;
+  box-shadow: 0px 4px -20px 0px #444;
+  border-radius: 21px;
+  padding-inline: 40px;
+  margin-top: 100px;
+}
+
+li:hover{
+  cursor: pointer;
+  color: hsl(281, 83%, 54%);
+}
+
+p{
+  color: var(--GrayishPurple);
+  opacity: 90%;
+  text-align: start;
+  /* display: none; */
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+}
+
+.mini{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden{
+  display: none;
+}
+
+.p-1, .p-2, .p-3, .p-4{
+  cursor: pointer;
+  scale: 0.9;
+}
