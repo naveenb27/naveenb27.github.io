@@ -48,10 +48,12 @@ body{
     background: var(--t2-main-background);
 }
 
-.container{
+.container {
     max-width: 500px;
-    margin: 60px auto;
-}
+    height: 100vh;
+    margin: 0 auto;
+    margin-block: 100px;
+  }
 
 button{
     background-color: var(--t2-key-background-orange);
