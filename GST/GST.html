@@ -294,8 +294,8 @@
         document.querySelector(".amount-before-tax").innerHTML = amt;
         document.querySelector(".rupee").innerHTML +=" "+ test(grand_total) +"Only/-";
         
-        document.querySelector(".cgst").innerHTML = csgt;
-        document.querySelector(".sgst").innerHTML = sgst;
+        document.querySelector(".cgst").innerHTML = csgt + " (" + (gst/2) + "%)";
+        document.querySelector(".sgst").innerHTML = sgst + " (" + (gst/2) + "%)";
         document.querySelector(".gst-total").innerHTML = gst_total;
         document.querySelector(".grand-amt").innerHTML = grand_total;
 
@@ -343,4 +343,5 @@
 
     </script>
 </body>
+
 </html>
