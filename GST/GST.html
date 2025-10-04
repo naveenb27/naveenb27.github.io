@@ -207,9 +207,9 @@
 
             <div class="row-7-container">
                 <td style="width: 31%;">
-                   <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;">CSGT</p>
-                   <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;">SGST</p>
-                   <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;">TOTAL AMOUNT[GST]</p>
+                    <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;" class="cgst-label">CGST</p>
+                    <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;" class="sgst-label">SGST</p>
+                    <p style="padding-left: 2%; padding-bottom: 10px; border-bottom: 1px solid black;">TOTAL AMOUNT[GST]</p>
                    <p style="padding-left: 2%;">GRAND TOTAL</p>
                 </td>
                 <td style="width: 18%;">
@@ -293,9 +293,11 @@
         document.querySelector(".amtt").innerHTML = amt;
         document.querySelector(".amount-before-tax").innerHTML = amt;
         document.querySelector(".rupee").innerHTML +=" "+ test(grand_total) +"Only/-";
+        document.querySelector(".cgst-label").innerHTML = "CGST (" + (gst/2) + "%)";
+        document.querySelector(".sgst-label").innerHTML = "SGST (" + (gst/2) + "%)";
         
-        document.querySelector(".cgst").innerHTML = csgt + " (" + (gst/2) + "%)";
-        document.querySelector(".sgst").innerHTML = sgst + " (" + (gst/2) + "%)";
+        document.querySelector(".cgst").innerHTML = csgt;
+        document.querySelector(".sgst").innerHTML = sgst;
         document.querySelector(".gst-total").innerHTML = gst_total;
         document.querySelector(".grand-amt").innerHTML = grand_total;
 
@@ -345,3 +347,4 @@
 </body>
 
 </html>
+
