@@ -286,7 +286,7 @@
         document.querySelector(".Address").innerHTML = addres;
         document.querySelector(".GST").innerHTML = gst_num;
         document.querySelector(".Invoice-No").innerHTML += no;
-        document.querySelector(".Invoice-date").innerHTML += date;
+        document.querySelector(".Invoice-date").innerHTML += formatDateDMY(date);
         document.querySelector(".hsn").innerHTML = hsn;
         document.querySelector(".rate").innerHTML = rate;
         document.querySelector(".qty").innerHTML = qty;
@@ -305,6 +305,17 @@
             document.querySelector(".printt").innerHTML='';
             window.print();
         }
+
+        function formatDateDMY(dateStr) {
+            const d = new Date(dateStr);
+        
+            const day = String(d.getDate()).padStart(2, '0');
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const year = d.getFullYear();
+        
+            return `${day} - ${month} - ${year}`;
+        }
+
 
 
         function test(n) {
@@ -347,4 +358,5 @@
 </body>
 
 </html>
+
 
