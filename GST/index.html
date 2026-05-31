@@ -1,67 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balu Tex — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --dark: #0F0E0B;
+    --surface: #1A1813;
+    --surface2: #242018;
+    --border: rgba(201,168,76,0.18);
+    --text: #F0EAD6;
+    --muted: #8A7F68;
+  }
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    width: 100%;
+    text-align: center;
+    padding: 48px 24px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #1A1813 0%, #0F0E0B 100%);
+  }
+  .brand-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .brand-line::before, .brand-line::after {
+    content: '';
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+  }
+  .logo-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--surface2);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .gst-badge {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    border: 1px solid var(--border);
+    padding: 4px 14px;
+    border-radius: 20px;
+  }
+  .greeting {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--gold);
+    margin: 40px 0 8px;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+  }
+  .nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    width: 100%;
+    max-width: 480px;
+    padding: 0 20px 40px;
+  }
+  .nav-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+  }
+  .nav-btn:hover {
+    border-color: var(--gold);
+    background: var(--surface2);
+    transform: translateY(-2px);
+  }
+  .nav-btn:hover::before { transform: scaleX(1); }
+  .nav-btn.primary {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: center;
+    padding: 22px 24px;
+    border-color: rgba(201,168,76,0.4);
+    background: linear-gradient(135deg, #201D15 0%, #1A1813 100%);
+  }
+  .btn-icon {
+    font-size: 26px;
+    line-height: 1;
+  }
+  .btn-label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .btn-desc {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 2px;
+  }
+  .footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    border-top: 1px solid var(--border);
+    width: 100%;
+  }
+</style>
 </head>
-    <style>
-    body {
-        font-family: sans-serif;
-        margin: 0;
-        text-align: center; 
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        gap: 10px; 
-    }
-
-
-    .container button {
-        padding: 20px; 
-        background-color: #4CAF50; 
-        color: white;
-        border: none;
-        border-radius: 5px; 
-        font-size: 16px;
-        cursor: pointer;
-        flex: 1;
-        margin-bottom: 10px; 
-        transition: background-color 0.3s ease; 
-    }
-
-    .container button:hover {
-        background-color: #3e8e41; 
-    }
-
-    h1 {
-        margin-bottom: 20px;
-    }
-
-    </style>
-
 <body>
-    <h1 style="text-align: center;">வருக!</h1>
-
-    <div class="container">
-        <button onclick="window.location.href='details.html'" class="customers-details">
-            வாடிக்கையாளர் விவரங்கள்
-        </button>
-        <button onclick="window.location.href='add.html'" class="add-customers">
-            வாடிக்கையாளர் விவரங்களைச் சேர்க்கவும்
-        </button>
-        <button onclick="window.location.href='modify.html'" class="edit-customer">
-            வாடிக்கையாளர் விவரங்களைத் திருத்த
-        </button>
-        <button onclick="window.location.href='delete.html'" class="edit-customer">
-            வாடிக்கையாளர்களை நீக்க
-        </button>
-        <button onclick="window.location.href='Generate.html'" class="generate-bill">
-            GST Bill உருவாக்கவும்
-        </button>
+  <div class="header">
+    <div class="brand-line">
+      <div class="logo-icon">🕉</div>
     </div>
+    <h1>Balu Tex</h1>
+    <div class="tagline">Salem · Textile Merchants</div>
+    <div class="gst-badge">GSTIN: 33CJIPB3138B1ZX</div>
+  </div>
+
+  <div class="greeting">வருக!</div>
+  <div class="subtitle">Select an option to continue</div>
+
+  <div class="nav-grid">
+    <a class="nav-btn primary" href="Generate.html">
+      <span class="btn-icon">🧾</span>
+      <div>
+        <div class="btn-label">Generate GST Bill</div>
+        <div class="btn-desc">Create a new tax invoice</div>
+      </div>
+    </a>
+    <a class="nav-btn" href="details.html">
+      <span class="btn-icon">👥</span>
+      <div class="btn-label">வாடிக்கையாளர் விவரங்கள்</div>
+      <div class="btn-desc">View customers</div>
+    </a>
+    <a class="nav-btn" href="add.html">
+      <span class="btn-icon">➕</span>
+      <div class="btn-label">சேர்க்கவும்</div>
+      <div class="btn-desc">Add customer</div>
+    </a>
+    <a class="nav-btn" href="modify.html">
+      <span class="btn-icon">✏️</span>
+      <div class="btn-label">திருத்த</div>
+      <div class="btn-desc">Edit customer</div>
+    </a>
+    <a class="nav-btn" href="delete.html">
+      <span class="btn-icon">🗑</span>
+      <div class="btn-label">நீக்க</div>
+      <div class="btn-desc">Delete customer</div>
+    </a>
+  </div>
+
+  <div class="footer">No. 236/4, Narasimhan Kovil Opposite Street, Allikuttai, Salem – 636003 &nbsp;·&nbsp; 9790092024</div>
 </body>
 </html>
