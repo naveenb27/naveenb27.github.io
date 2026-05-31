@@ -1,109 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add customers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Customer — Balu Tex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A; --dark: #0F0E0B;
+    --surface: #1A1813; --surface2: #242018; --border: rgba(201,168,76,0.18);
+    --text: #F0EAD6; --muted: #8A7F68;
+  }
+  body { background: var(--dark); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+  .topbar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--surface);
+  }
+  .back-btn {
+    background: none; border: 1px solid var(--border); color: var(--muted);
+    border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; transition: all 0.2s; text-decoration: none; display: inline-block;
+  }
+  .back-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .page-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--gold-light); }
+  .container { max-width: 520px; margin: 32px auto; padding: 0 20px 60px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
+  .section-label {
+    font-size: 10px; letter-spacing: 2.5px; color: var(--muted); text-transform: uppercase;
+    margin-bottom: 22px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+  }
+  .field { margin-bottom: 20px; }
+  .field:last-of-type { margin-bottom: 0; }
+  label { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  input, textarea {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 14px; color: var(--text); font-size: 14px;
+    font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s;
+  }
+  input:focus, textarea:focus { border-color: var(--gold); }
+  textarea { resize: vertical; min-height: 90px; }
+  .submit-btn {
+    width: 100%; padding: 15px; background: var(--gold); color: #0F0E0B;
+    border: none; border-radius: 12px; font-size: 15px; font-weight: 500;
+    font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s;
+    margin-top: 20px;
+  }
+  .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .toast {
+    display: none; background: #1a3a1a; border: 1px solid #2d6b2d; color: #7ec97e;
+    border-radius: 10px; padding: 12px 16px; text-align: center; font-size: 13px; margin-top: 14px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <label for="">Customer Name:</label>
-        <input class="name" type="text">
-        <br>
-
-        <label for="">Address: </label>
-        <textarea class="add" placeholder="Enter the address"></textarea>
-        <br>
-
-        <label for="">Gst No: </label>
-        <input type="text" name="gst" id="gst">
-
-        <div class="btn">
-            <button class="btnn">Submit</button>
-        </div>
-
+  <div class="topbar">
+    <a href="index.html" class="back-btn">← Home</a>
+    <div class="page-title">Add Customer</div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="section-label">New Customer Details</div>
+      <div class="field">
+        <label>Customer Name</label>
+        <input class="name" type="text" placeholder="Enter full name">
+      </div>
+      <div class="field">
+        <label>Address</label>
+        <textarea class="add" placeholder="Enter complete address"></textarea>
+      </div>
+      <div class="field">
+        <label>GST Number</label>
+        <input type="text" id="gst" placeholder="e.g. 33XXXXX1234X1ZX" style="letter-spacing: 1px; text-transform: uppercase;">
+      </div>
     </div>
+    <button class="submit-btn" onclick="addCustomer()">Add Customer →</button>
+    <div class="toast" id="toast">✓ Customer added successfully!</div>
+  </div>
 
-
-    <script src="data/customers.js"></script>    
-    <script>
-        customers = JSON.parse(localStorage.getItem('customers')) || [];
-        const btn = document.querySelector('.btnn');
-
-        btn.addEventListener(('click'), ()=>{
-            const name = document.querySelector('.name').value;
-            const add = document.querySelector('.add').value;
-            const gst = document.querySelector('#gst').value;
-
-            customers.push({to: name, address: add, gst_no: gst});
-            localStorage.setItem('customers', JSON.stringify(customers));
-            console.log(customers);
-
-            alert("Added Successfully.");
-            window.location.href='add.html';
-        })
-    </script>
-
-    
-    <style>
-        body {
-        font-family: sans-serif;
-        margin: 0;
-        }
-
-        .container {
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 20px;
-        margin: 20px;
-        background-color: #f5f5f5;
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
-
-        .container label {
-        font-size: 16px;
-        margin-bottom: 5px;
-        }
-
-        .container input,
-        .container textarea {
-        margin-inline: 60px;
-        width: 100%;
-        padding: 10px 15px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        font-size: 15px;
-        margin-bottom: 15px;
-        }
-
-        .container textarea {
-        resize: vertical; /* Allow users to resize the textarea */
-        }
-
-        .btn button {
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        }
-
-        .btn button:hover {
-        background-color: #3e8e41;
-        }
-
-        .btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        }
-
-    </style>
+  <script src="data/customers.js"></script>
+  <script>
+    customers = JSON.parse(localStorage.getItem('customers')) || customers || [];
+    function addCustomer() {
+      const name = document.querySelector('.name').value.trim();
+      const add = document.querySelector('.add').value.trim();
+      const gst = document.querySelector('#gst').value.trim();
+      if (!name || !add) { alert('Please fill in name and address.'); return; }
+      customers.push({ to: name, address: add, gst_no: gst });
+      localStorage.setItem('customers', JSON.stringify(customers));
+      document.querySelector('#toast').style.display = 'block';
+      document.querySelector('.name').value = '';
+      document.querySelector('.add').value = '';
+      document.querySelector('#gst').value = '';
+      setTimeout(() => { document.querySelector('#toast').style.display = 'none'; }, 2500);
+    }
+  </script>
 </body>
 </html>
