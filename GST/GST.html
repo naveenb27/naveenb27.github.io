@@ -48,7 +48,17 @@
     display: flex; justify-content: space-between;
     font-size: 11px; color: #8A7F68; letter-spacing: 0.5px; margin-bottom: 16px;
   }
-  .brand-center { text-align: center; margin-bottom: 6px; }
+  .header-main {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .god-frame {
+    width: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  }
+  .god-img {
+    width: 68px; height: 88px; object-fit: contain;
+    filter: sepia(0.15) contrast(1.05);
+  }
+  .brand-center { text-align: center; flex: 1; margin-bottom: 6px; }
   .brand-center h1 {
     font-family: 'Playfair Display', serif; font-size: 36px;
     color: #1a1813; letter-spacing: 4px; font-weight: 700;
@@ -162,12 +172,20 @@
         <span>GSTIN: 33CJIPB3138B1ZX &nbsp;|&nbsp; PAN: CJIPB3138B</span>
         <span>Phone: 9790092024</span>
       </div>
-      <div class="brand-center">
-        <h1>BALU TEX</h1>
-      </div>
-      <div class="brand-gold-line"><span class="brand-gold-dot">◆</span></div>
-      <div class="brand-address">
-        No.236/4, Narasimhan Kovil Opposite Street, Allikuttai, Salem – 636003
+      <div class="header-main">
+        <div class="god-frame">
+          <img src="image/lordMurugan.png" alt="Lord Murugan" class="god-img">
+        </div>
+        <div class="brand-center">
+          <h1>BALU TEX</h1>
+          <div class="brand-gold-line"><span class="brand-gold-dot">◆</span></div>
+          <div class="brand-address">
+            No.236/4, Narasimhan Kovil Opposite Street, Allikuttai, Salem – 636003
+          </div>
+        </div>
+        <div class="god-frame">
+          <img src="image/lordMurugan.png" alt="Lord Murugan" class="god-img">
+        </div>
       </div>
     </div>
 
