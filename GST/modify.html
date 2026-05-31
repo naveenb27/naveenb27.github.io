@@ -1,127 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modification</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Customer — Balu Tex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f4f4f9;
-    }
-    .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    label {
-        display: block;
-        margin-top: 10px;
-        font-weight: bold;
-    }
-    select, textarea, input[type="text"] {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    .btn {
-        text-align: right;
-        margin-top: 20px;
-    }
-    .btnn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    .btnn:hover {
-        background-color: #45a049;
-    }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A; --dark: #0F0E0B;
+    --surface: #1A1813; --surface2: #242018; --border: rgba(201,168,76,0.18);
+    --text: #F0EAD6; --muted: #8A7F68;
+  }
+  body { background: var(--dark); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+  .topbar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--surface);
+  }
+  .back-btn {
+    background: none; border: 1px solid var(--border); color: var(--muted);
+    border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; transition: all 0.2s; text-decoration: none; display: inline-block;
+  }
+  .back-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .page-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--gold-light); }
+  .container { max-width: 520px; margin: 32px auto; padding: 0 20px 60px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+  .section-label {
+    font-size: 10px; letter-spacing: 2.5px; color: var(--muted); text-transform: uppercase;
+    margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+  }
+  .field { margin-bottom: 18px; }
+  .field:last-of-type { margin-bottom: 0; }
+  label { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  input, select, textarea {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 14px; color: var(--text); font-size: 14px;
+    font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+  }
+  input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+  textarea { resize: vertical; min-height: 80px; }
+  .submit-btn {
+    width: 100%; padding: 15px; background: var(--gold); color: #0F0E0B;
+    border: none; border-radius: 12px; font-size: 15px; font-weight: 500;
+    font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s;
+  }
+  .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .toast {
+    display: none; background: #1a3a1a; border: 1px solid #2d6b2d; color: #7ec97e;
+    border-radius: 10px; padding: 12px 16px; text-align: center; font-size: 13px; margin-top: 14px;
+  }
 </style>
+</head>
 <body>
-    <div class="container">
-        <label for="">Customer Name: </label>
-          <select name="custom" id="custom"></select>
-        <br>
-
-        <label for="">Address: </label>
-        <textarea name="add" id="add"></textarea>
-        <br>
-
-        <label for="">No:</label>
-        <input type="text" class="gst">
-        <br>
-
-        <div class="btn">
-            <button class="btnn">Submit</button>
-        </div>
+  <div class="topbar">
+    <a href="index.html" class="back-btn">← Home</a>
+    <div class="page-title">Edit Customer</div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="section-label">Select Customer</div>
+      <div class="field">
+        <label>Customer Name</label>
+        <select id="custom" onchange="updateFields()"></select>
+      </div>
     </div>
-    
-    <script src="data/customers.js"></script>
-    <script>
-        customers = JSON.parse(localStorage.getItem('customers')) || [];
+    <div class="card">
+      <div class="section-label">Update Details</div>
+      <div class="field">
+        <label>Address</label>
+        <textarea id="add" placeholder="Enter updated address"></textarea>
+      </div>
+      <div class="field">
+        <label>GST Number</label>
+        <input type="text" class="gst" placeholder="GST Number" style="letter-spacing: 1px; text-transform: uppercase;">
+      </div>
+    </div>
+    <button class="submit-btn" onclick="save()">Save Changes →</button>
+    <div class="toast" id="toast">✓ Changes saved successfully!</div>
+  </div>
 
-        let html = '';
-        customers.forEach((object, index) => {
-            const {to, address, gst_no} = object;
+  <script src="data/customers.js"></script>
+  <script>
+    let all = JSON.parse(localStorage.getItem('customers')) || customers || [];
 
-            html+= `<option value=${to}>${to}</option>`;
-        });
+    let html = '';
+    all.forEach(obj => { html += `<option value="${obj.to}">${obj.to}</option>`; });
+    document.querySelector('#custom').innerHTML = html;
 
-        document.querySelector("#custom").innerHTML = html;
-        function updateFields(){
-            
-            const cus = document.querySelector("#custom").value;
+    function updateFields() {
+      const cus = document.querySelector('#custom').value;
+      const found = all.find(o => o.to === cus);
+      if (found) {
+        document.querySelector('.gst').value = found.gst_no || '';
+        document.querySelector('#add').value = found.address || '';
+      }
+    }
+    updateFields();
 
-            customers.forEach((obj, index) =>{
-                const {to, address, gst_no} = obj;
-
-                let word = to.split(" ");
-                word = word[0];
-
-                if(cus === word){
-                    document.querySelector(".gst").value = gst_no;
-                    document.querySelector("#add").value = address;
-                }
-            });
-        }
-
-        updateFields();
-
-        document.querySelector("#custom").addEventListener('change', updateFields);
-
-        const btn = document.querySelector(".btnn");
-
-        
-        btn.addEventListener(('click'), ()=>{
-            const cus = document.querySelector("#custom").value;
-            const g = document.querySelector(".gst").value;
-            const add = document.querySelector("#add").value;
-
-            customers.forEach((obj, index) =>{
-                const {to, address, gst_no} = obj;
-                let word = to.split(" ");
-                word = word[0];
-
-                if(cus === word){
-                    customers[index].address = add;
-                    customers[index].gst_no = g;
-                    localStorage.setItem('customers', JSON.stringify(customers));
-                }
-            })
-
-            alert("Modified Successfully.");
-            window.location.href='modify.html';
-        });
-    </script>
+    function save() {
+      const cus = document.querySelector('#custom').value;
+      const g = document.querySelector('.gst').value;
+      const add = document.querySelector('#add').value;
+      const i = all.findIndex(o => o.to === cus);
+      if (i !== -1) {
+        all[i].address = add;
+        all[i].gst_no = g;
+        localStorage.setItem('customers', JSON.stringify(all));
+        document.querySelector('#toast').style.display = 'block';
+        setTimeout(() => { document.querySelector('#toast').style.display = 'none'; }, 2500);
+      }
+    }
+  </script>
 </body>
 </html>
