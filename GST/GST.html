@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tax Invoice — Balu Tex</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -92,6 +92,13 @@
   .field-value strong { font-weight: 500; font-size: 14px; }
   .bill-meta-row { margin-bottom: 12px; }
 
+  /* Numbers & Currency - simpler, clean numeric font */
+  .num, .Invoice-No, .Invoice-date, .rate, .qty, .amtt, .amount-before-tax,
+  .cgst, .sgst, .gst-total, .grand-amt, .rupee-words, .bank-row span:last-child {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+
   /* Items Table */
   .items-table { width: 100%; border-collapse: collapse; }
   .items-table th {
@@ -103,7 +110,7 @@
     padding: 14px; font-size: 13px; color: #1a1813; border-bottom: 1px solid #f0ebe0;
   }
   .items-table tr:last-child td { border-bottom: none; }
-  .sno-col { width: 6%; text-align: center; color: #8A7F68; }
+  .sno-col { width: 6%; text-align: center; color: #8A7F68; font-family: 'Inter', Arial, Helvetica, sans-serif; }
   .amount-col { text-align: right; font-weight: 500; }
 
   /* Rupees row */
@@ -113,6 +120,7 @@
     font-style: italic;
   }
   .rupees-row strong { color: #1a1813; font-style: normal; }
+  .rupee-words { font-style: normal; }
 
   /* Totals + Bank */
   .bottom-section {
@@ -132,12 +140,13 @@
   }
   .total-row:last-child { border-bottom: none; }
   .total-row .label { color: #5a5145; }
-  .total-row .val { font-weight: 500; text-align: right; }
+  .total-row .val { font-weight: 500; text-align: right; font-family: 'Inter', Arial, Helvetica, sans-serif; font-variant-numeric: tabular-nums; }
   .grand-row {
     display: flex; justify-content: space-between; align-items: center;
     padding: 14px 20px; background: #1a1813; color: #C9A84C;
     font-family: 'Playfair Display', serif; font-size: 16px;
   }
+  .grand-row .grand-amt { font-family: 'Inter', Arial, Helvetica, sans-serif; font-variant-numeric: tabular-nums; }
 
   /* Terms + Signature */
   .footer-section { display: flex; }
